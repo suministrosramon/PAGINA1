@@ -1,0 +1,176 @@
+Aquí tienes el código HTML completo con las correcciones aplicadas:
+
+1. **Alineación del contenido de la sección "Contacto":** Se estructuró la información en tarjetas dentro de una cuadrícula (`grid`), alineando los elementos a la izquierda con íconos descriptivos y datos claros de atención, teléfono, correo y horarios.
+2. **Eliminación del texto repetido:** Se removió la frase *"Visítanos en nuestra sucursal principal o realiza tus pedidos en línea."* que aparecía duplicada tanto en la sección de Ubicación como en la de Contacto.
+
+```html
+
+
+
+    
+    
+    SUMINISTROS RAMON | Equipo de Seguridad Industrial
+    
+
+
+
+```
+
+# SUMINISTROS RAMON
+
+Protección y equipo de alta calidad para tu empresa
+
+[🛒 Ir a la Tienda en Línea](https://tu-tienda-en-linea.com?utm_source=gemini)
+
+[¿Quiénes Somos?](#nosotros)
+[Marcas](#Marcas)
+[Catálogo](#catalogo)
+[Ubicación](#ubicacion)
+[Cotizaciones](#Cotizaciones)
+[Contacto](#Contacto)
+
+[🛒 Tienda en Línea](https://tu-tienda-en-linea.com?utm_source=gemini)
+
+## ¿Quiénes Somos?
+
+SUMINISTROS RAMON como nombre comercial es una empresa 100% mexicana, fundada y establecida en el municipio de Veracruz Ignacio de la Llave, estado de Veracruz, para atender las necesidades crecientes del mercado en el área general de equipo de seguridad industrial contando con productos como cascos, lentes, guantes, tapones auditivos, botas, overoles Tyvek, chalecos, conos, entre otros.
+
+### Misión
+
+Ser una empresa flexible que tiene como principal objetivo crear vínculos que fortalezcan y beneficien a ambas partes ofreciendo calidad y servicio.
+
+### Visión
+
+Ser una empresa líder, ofreciendo la mejor calidad, servicio y precio, logrando la satisfacción de nuestros clientes, posicionándonos como una de las mejores empresas en nuestro ramo, guiada por el trabajo en equipo con la participación de nuestros colaboradores.
+
+### Política de calidad
+
+En Suministros Ramón, comprendemos que la calidad es un valor esencial para la satisfacción de nuestros clientes, por lo que nos comprometemos a tener los productos con la mejor calidad.
+
+## Marcas Distribuidas
+
+Trabajamos con los fabricantes e importadores líderes en equipo de protección personal e higiene industrial.
+
+DERMACARE
+
+GLOBAL GLOVE
+
+SAFE-FIT
+
+MSA
+
+MR SEGURIDAD
+
+HERHILD
+
+3M
+
+ANSELL
+
+ROMAK
+
+MOLDEX
+
+BRICK
+
+BTP LATINOAMÉRICA
+
+STEELPRO SAFETY
+
+INFRA
+
+CALZADO DURAMIL
+
+IDRA POWER
+
+## Catálogo de Productos
+
+### Protección de cabeza
+
+Cascos de seguridad dieléctricos, gorras de protección y accesorios de suspensión.
+
+### Protección visual
+
+Lentes antiempañantes UV, caretas para esmerilar y goggles de seguridad industrial.
+
+### Protección respiratoria
+
+Mascarillas desechables N95, respiradores media cara y cartuchos para gases/vapores.
+
+### Protección auditiva
+
+Tapones auditivos reutilizables y desechables, y orejeras de alta atenuación.
+
+### Protección manos y brazos
+
+Guantes anticorte nivel 5, carnaza, tipo soldador, nitrilo y mangas de protección industrial.
+
+### Protección de cuerpo
+
+Overoles Tyvek, chalecos reflejantes de alta visibilidad y trajes impermeables.
+
+### Protección de pies
+
+Botas con casquillo de poliamida o acero, suela antiderrapante y calzado ergonómico.
+
+### Protección para bomberos
+
+Chaquetones, pantalón de combate, escafandras y equipo de protección térmica certificado.
+
+### Protección de alturas
+
+Arneses de cuerpo completo, líneas de vida retráctiles, amortiguadores y conectores.
+
+### Regaderas y lavaojos
+
+Estaciones de emergencia, regaderas combinadas y sistemas lavaojos portátiles.
+
+### Equipo de vialidad
+
+Conos de señalización, trafitambos, malla delimitadora, topes y chalecos reflejantes.
+
+## Nuestra Ubicación
+
+Visítanos en nuestra sucursal principal o realiza tus pedidos en línea.
+
+## Realiza tu cotización
+
+Nombre Completo:
+
+Correo Electrónico:
+
+Mensaje o Cotización:
+
+Enviar Mensaje
+
+## Contáctanos
+
+### 📞 Teléfono
+
+[229 458 7511](tel:2294587511)
+
+### 💬 WhatsApp
+
+[+52 229 458 7511](https://wa.me/522294587511?utm_source=gemini)
+
+### ✉️ Correo Electrónico
+
+[ventas@suministrosramon.com](mailto:ventas@suministrosramon.com)
+
+### ⏰ Horario de Atención
+
+Lunes a Viernes: 8:00 AM - 6:00 PM
+
+
+
+Sábados: 8:00 AM - 2:00 PM
+
+[
+💬 WhatsApp
+](https://wa.me/522294587511?text=Hola,%2520me%2520interesa%2520cotizar%2520equipo%2520de%2520seguridad&utm_source=gemini)
+
+© 2026 SUMINISTROS RAMON - Todos los derechos reservados.
+
+```
+
+```
