@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SUMINISTROS RAMON - Protección y equipo de seguridad industrial de alta calidad para tu empresa.">
     <title>SUMINISTROS RAMON | Equipo de Seguridad Industrial</title>
     <style>
         /* Variables Estilo Industrial */
@@ -13,7 +14,7 @@
             --amarillo-seguridad: #f59e0b; /* Naranja/Amarillo de alta visibilidad */
             --texto-claro: #f8fafc;
             --texto-secundario: #94a3b8;
-            --borde-tarjeta: #334155; 
+            --borde-tarjeta: #334155;
         }
 
         * {
@@ -23,10 +24,20 @@
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+        }
+
         body {
             background-color: var(--bg-principal);
             color: var(--texto-claro);
             line-height: 1.6;
+            animation: fadeIn 0.8s ease-in; /* Animación de entrada */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Encabezado Principal */
@@ -52,7 +63,6 @@
             border-radius: 8px;
             position: relative;
             overflow: hidden;
-            
             background-image: 
                 linear-gradient(
                     to right, 
@@ -117,7 +127,7 @@
         /* Navegación */
         nav {
             background-color: #080d1a;
-            padding: 0.8rem;
+            padding: 1rem;
             text-align: center;
             position: sticky;
             top: 0;
@@ -127,13 +137,12 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
         }
 
         nav a {
             color: var(--texto-claro);
             text-decoration: none;
-            margin: 0 10px;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.9rem;
@@ -148,7 +157,7 @@
         nav a.nav-tienda {
             color: var(--amarillo-seguridad);
             border: 1px solid var(--amarillo-seguridad);
-            padding: 4px 12px;
+            padding: 6px 14px;
             border-radius: 4px;
         }
 
@@ -188,7 +197,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .nosotros-card {
@@ -196,6 +205,11 @@
             padding: 1.5rem;
             border-radius: 6px;
             border: 1px solid var(--borde-tarjeta);
+            transition: transform 0.3s ease;
+        }
+
+        .nosotros-card:hover {
+            transform: translateY(-5px);
         }
 
         .nosotros-card h3 {
@@ -213,9 +227,9 @@
         /* Sección Marcas */
         .grid-marcas {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 1.2rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .marca-card {
@@ -252,7 +266,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Estilos del Catálogo Desplegable (Sin JavaScript) */
+        /* Estilos del Catálogo Desplegable */
         .catalogo-desplegable {
             display: flex;
             flex-direction: column;
@@ -294,7 +308,6 @@
             color: var(--amarillo-seguridad);
         }
 
-        /* Estilos y animación de la flecha */
         .icono-flecha {
             font-size: 0.85rem;
             color: var(--amarillo-seguridad);
@@ -302,14 +315,13 @@
             transition: transform 0.3s ease;
         }
 
-        /* Rota la flecha 180° cuando el desplegable está abierto */
         .categoria-item[open] .icono-flecha {
             transform: rotate(180deg);
         }
 
         .sublista-productos {
             list-style-type: disc;
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 2.5rem;
             background-color: var(--bg-principal);
             border-top: 1px solid var(--borde-tarjeta);
         }
@@ -317,10 +329,6 @@
         .sublista-productos li {
             color: var(--texto-secundario);
             margin-bottom: 0.5rem;
-        }
-
-        .sublista-productos li:last-child {
-            margin-bottom: 0;
         }
 
         /* Formulario de Cotizaciones */
@@ -343,12 +351,14 @@
             background-color: var(--bg-principal);
             color: var(--texto-claro);
             border-radius: 4px;
+            transition: border-color 0.3s;
         }
 
         .form-group input:focus, 
         .form-group textarea:focus {
             outline: none;
             border-color: var(--amarillo-seguridad);
+            box-shadow: 0 0 5px rgba(245, 158, 11, 0.3);
         }
 
         button[type="submit"] {
@@ -362,11 +372,15 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, transform 0.1s;
         }
 
         button[type="submit"]:hover {
             background-color: #d97706;
+        }
+        
+        button[type="submit"]:active {
+            transform: scale(0.98);
         }
 
         /* Mapa / Ubicación */
@@ -378,74 +392,25 @@
             filter: grayscale(20%) contrast(1.1);
         }
 
-        /* contacto */
+        /* Sección Contacto Mejorada */
         .contacto-seccion {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #0d1527; /* Mismo fondo azul oscuro del sitio */
-  color: #ffffff;
-}
+            text-align: center;
+        }
+        
+        .info-contacto {
+            background: var(--bg-tarjeta);
+            border: 1px solid var(--borde-tarjeta);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem auto;
+            max-width: 600px;
+        }
 
-.contacto-seccion h2 {
-  color: #f59e0b; /* Dorado / Naranja principal */
-  font-size: 2rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.contacto-seccion p {
-  color: #94a3b8;
-  margin-bottom: 30px;
-}
-
-.redes-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.red-card {
-  background-color: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 8px;
-  padding: 25px 20px;
-  width: 200px;
-  text-decoration: none;
-  color: #ffffff;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.red-card:hover {
-  transform: translateY(-5px);
-  border-color: #f59e0b;
-  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.2);
-}
-
-.red-card i {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-  color: #f59e0b;
-}
-
-.red-card h3 {
-  font-size: 1.1rem;
-  margin: 5px 0;
-  font-weight: 600;
-}
-
-.red-card p {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  margin: 0;
-  word-break: break-all;
-}
-
+        .info-contacto p {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: var(--texto-claro);
+        }
 
         /* Botón Flotante de WhatsApp */
         .btn-whatsapp {
@@ -463,10 +428,12 @@
             align-items: center;
             gap: 8px;
             z-index: 1000;
+            transition: transform 0.2s, background-color 0.2s;
         }
 
         .btn-whatsapp:hover {
             background-color: #128c7e;
+            transform: scale(1.05);
         }
 
         footer {
@@ -479,18 +446,30 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
+        /* Media Queries para Móviles */
+        @media (max-width: 768px) {
+            nav {
+                gap: 10px;
+                padding: 1rem 0.5rem;
+            }
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.3rem;
+            }
             .header-container {
                 flex-direction: column;
-                gap: 15px;
                 text-align: center;
             }
             .header-text {
-                text-align: center;
                 padding: 1.5rem;
+                text-align: center;
             }
             .header-logo {
                 margin-left: 0;
+                margin-top: 15px;
+            }
+            h2 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -505,7 +484,7 @@
                 <a href="https://tu-tienda-en-linea.com" class="btn-tienda-header" target="_blank">🛒 Ir a la Tienda en Línea</a>
             </div>
             <div class="header-logo">
-                <img src="logo.png.png" alt="Suministros Ramón Logo">
+                <img src="logo.png" alt="Suministros Ramón Logo">
             </div>
         </div>
     </header>
@@ -525,7 +504,7 @@
         <!-- Sección ¿Quiénes Somos? -->
         <section id="nosotros">
             <h2>¿Quiénes Somos?</h2>
-            <p style="color: var(--texto-secundario); margin-bottom: 1.2rem;">
+            <p style="color: var(--texto-secundario);">
                 SUMINISTROS RAMON como nombre comercial es una empresa 100% mexicana, fundada y establecida en el municipio de Veracruz Ignacio de la Llave, estado de Veracruz, para atender las necesidades crecientes del mercado en el área general de equipo de seguridad industrial contando con productos como cascos, lentes, guantes, tapones auditivos, botas, overoles Tyvek, chalecos, conos, entre otros.
             </p>
             <div class="nosotros-grid">
@@ -536,7 +515,7 @@
 
                 <div class="nosotros-card">
                     <h3>Visión</h3>
-                    <p>Ser una empresa líder, ofreciendo la mejor calidad, servicio y precio, logrando la satisfacción de nuestros clientes, posicionándonos como una de las mejores empresas en nuestro ramo, guiada por el trabajo en equipo con la participación de nuestros colaboradores.</p>
+                    <p>Ser una empresa líder, ofreciendo la mejor calidad, servicio y precio, logrando la satisfacción de nuestros clientes, posicionándonos como una de las mejores empresas en nuestro ramo.</p>
                 </div>
 
                 <div class="nosotros-card">
@@ -544,84 +523,36 @@
                     <p>En Suministros Ramón, comprendemos que la calidad es un valor esencial para la satisfacción de nuestros clientes, por lo que nos comprometemos a tener los productos con la mejor calidad.</p>
                 </div>
             </div>
-        </section>    
-    
+        </section> 
+        
         <!-- Sección Marcas -->
         <section id="Marcas">
             <h2>Marcas Distribuidas</h2>
-            <p style="margin-bottom: 1.5rem; color: var(--texto-secundario);">
+            <p style="color: var(--texto-secundario);">
                 Trabajamos con los fabricantes e importadores líderes en equipo de protección personal e higiene industrial.
             </p>
             
             <div class="grid-marcas">
-                <div class="marca-card">
-                    <img src="DermaCare.png" alt="DermaCare">
-                    <span>DERMACARE</span>
-                </div>
-                <div class="marca-card">
-                    <img src="Global_Glove.png" alt="Global Glove">
-                    <span>GLOBAL GLOVE</span>
-                </div>
-                <div class="marca-card">
-                    <img src="saefit.png" alt="Safe-Fit">
-                    <span>SAFE-FIT</span>
-                </div>
-                <div class="marca-card">
-                    <img src="msa.png" alt="MSA Safety">
-                    <span>MSA</span>
-                </div>
-                <div class="marca-card">
-                    <img src="mr.png" alt="MR Seguridad">
-                    <span>MR SEGURIDAD</span>
-                </div>
-                <div class="marca-card">
-                    <img src="her.png" alt="Herhild">
-                    <span>HERHILD</span>
-                </div>
-                <div class="marca-card">
-                    <img src="3m.png" alt="3M">
-                    <span>3M</span>
-                </div>
-                <div class="marca-card">
-                    <img src="ans.png" alt="Ansell">
-                    <span>ANSELL</span>
-                </div>
-                <div class="marca-card">
-                    <img src="saf.png" alt="Romak">
-                    <span>ROMAK</span>
-                </div>
-                <div class="marca-card">
-                    <img src="mod.png" alt="Moldex">
-                    <span>MOLDEX</span>
-                </div>
-                <div class="marca-card">
-                    <img src="bri.png" alt="Brick">
-                    <span>BRICK</span>
-                </div>
-                <div class="marca-card">
-                    <img src="btp.png" alt="BTP Latinoamérica">
-                    <span>BTP LATINOAMÉRICA</span>
-                </div>
-                <div class="marca-card">
-                    <img src="sta.png" alt="Steelpro Safety">
-                    <span>STEELPRO SAFETY</span>
-                </div>
-                <div class="marca-card">
-                    <img src="inf.png" alt="Infra">
-                    <span>INFRA</span>
-                </div>
-                <div class="marca-card">
-                    <img src="dur.png" alt="Calzado Duramil">
-                    <span>CALZADO DURAMIL</span>
-                </div>
-                <div class="marca-card">
-                    <img src="Captura de pantalla 2026-09-24 132144.png" alt="Idra Power">
-                    <span>IDRA POWER</span>
-                </div>
+                <div class="marca-card"><img src="DermaCare.png" alt="DermaCare"><span>DERMACARE</span></div>
+                <div class="marca-card"><img src="Global_Glove.png" alt="Global Glove"><span>GLOBAL GLOVE</span></div>
+                <div class="marca-card"><img src="saefit.png" alt="Safe-Fit"><span>SAFE-FIT</span></div>
+                <div class="marca-card"><img src="msa.png" alt="MSA Safety"><span>MSA</span></div>
+                <div class="marca-card"><img src="mr.png" alt="MR Seguridad"><span>MR SEGURIDAD</span></div>
+                <div class="marca-card"><img src="her.png" alt="Herhild"><span>HERHILD</span></div>
+                <div class="marca-card"><img src="3m.png" alt="3M"><span>3M</span></div>
+                <div class="marca-card"><img src="ans.png" alt="Ansell"><span>ANSELL</span></div>
+                <div class="marca-card"><img src="saf.png" alt="Romak"><span>ROMAK</span></div>
+                <div class="marca-card"><img src="mod.png" alt="Moldex"><span>MOLDEX</span></div>
+                <div class="marca-card"><img src="bri.png" alt="Brick"><span>BRICK</span></div>
+                <div class="marca-card"><img src="btp.png" alt="BTP"><span>BTP LATINOAMÉRICA</span></div>
+                <div class="marca-card"><img src="sta.png" alt="Steelpro"><span>STEELPRO SAFETY</span></div>
+                <div class="marca-card"><img src="inf.png" alt="Infra"><span>INFRA</span></div>
+                <div class="marca-card"><img src="dur.png" alt="Duramil"><span>CALZADO DURAMIL</span></div>
+                <div class="marca-card"><img src="Captura de pantalla 2026-09-24 132144.png" alt="Idra Power"><span>IDRA POWER</span></div>
             </div>
         </section>
 
-        <!-- Sección Catálogo de Productos (Desplegable sin JS) -->
+        <!-- Sección Catálogo -->
         <section id="catalogo">
             <h2>Catálogo de Productos</h2>
             <div class="catalogo-desplegable">
@@ -691,8 +622,7 @@
                         <span class="icono-flecha">▼</span>
                     </summary>
                     <ul class="sublista-productos">
-                        <li>Chaquetones</li>
-                        <li>Pantalón de combate</li>
+                        <li>Chaquetones y pantalón de combate</li>
                         <li>Escafandras</li>
                         <li>Equipo de protección térmica certificado</li>
                     </ul>
@@ -738,32 +668,39 @@
         <!-- Sección Cotizaciones -->
         <section id="Cotizaciones">
             <h2>Realiza tu cotización</h2>
-            <form action="#" method="POST">
+            <!-- Configurado con mailto para abrir el gestor de correo -->
+            <form action="mailto:ventas@suministrosramon.com.mx" method="POST" enctype="text/plain">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                    <input type="text" id="nombre" name="Nombre" required placeholder="Ej. Juan Pérez">
                 </div>
 
                 <div class="form-group">
                     <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+                    <input type="email" id="correo" name="Correo" required placeholder="ejemplo@correo.com">
                 </div>
 
                 <div class="form-group">
                     <label for="mensaje">Mensaje o Cotización:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe aquí los productos que necesitas cotizar..."></textarea>
+                    <textarea id="mensaje" name="Mensaje" rows="5" required placeholder="Escribe aquí los productos que necesitas cotizar..."></textarea>
                 </div>
 
                 <button type="submit">Enviar Mensaje</button>
-            </form> ventas@suministrosramon.com.mx
-         
+            </form> 
         </section>
         
         <!-- Sección Contacto -->
-        <section id="Contacto">
+        <section id="Contacto" class="contacto-seccion">
             <h2>Contáctanos</h2>
-            <p style="margin-bottom: 1rem; color: var(--texto-secundario);">Visítanos en nuestra sucursal principal o realiza tus pedidos en línea.</p>
-            <a href="https://tu-tienda-en-linea.com" target="_blank" class="nav-tienda">🛒 Tienda en Línea</a>
+            <p style="color: var(--texto-secundario);">Estamos listos para atender tus requerimientos de seguridad industrial.</p>
+            
+            <div class="info-contacto">
+                <p>📧 <strong>Correo:</strong> ventas@suministrosramon.com.mx</p>
+                <p>📞 <strong>WhatsApp:</strong> +52 229 458 7511</p>
+                <p>📍 <strong>Ubicación:</strong> Veracruz, Ver.</p>
+            </div>
+
+            <a href="https://tu-tienda-en-linea.com" target="_blank" class="btn-tienda-header">🛒 Visitar Tienda en Línea</a>
         </section>
 
     </div>
@@ -779,4 +716,3 @@
 
 </body>
 </html>
-
