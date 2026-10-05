@@ -103,10 +103,12 @@
             font-size: 0.9rem;
             letter-spacing: 0.5px;
             transition: background-color 0.2s ease, transform 0.2s ease;
+            border: 2px solid var(--amarillo-seguridad);
         }
 
         .btn-tienda-header:hover {
             background-color: #d97706;
+            border-color: #d97706;
             transform: translateY(-2px);
         }
 
@@ -329,6 +331,25 @@
         .sublista-productos li {
             color: var(--texto-secundario);
             margin-bottom: 0.5rem;
+        }
+
+        /* Botones extras al final del catálogo */
+        .botones-catalogo {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-descarga {
+            background-color: transparent;
+            color: var(--amarillo-seguridad);
+        }
+
+        .btn-descarga:hover {
+            background-color: var(--amarillo-seguridad);
+            color: #000000;
         }
 
         /* Formulario de Cotizaciones */
@@ -709,6 +730,18 @@
                 </details>
 
             </div>
+
+            <!-- Botones debajo del catálogo -->
+            <div class="botones-catalogo">
+                <a href="https://tu-tienda-en-linea.com" target="_blank" class="btn-tienda-header">
+                    🛒 Ir a la Tienda en Línea
+                </a>
+                <!-- IMPORTANTE: Cambia 'ruta-al-catalogo.pdf' por la ruta o enlace a tu PDF real -->
+                <a href="ruta-al-catalogo.pdf" target="_blank" class="btn-tienda-header btn-descarga">
+                    📄 Descargar Catálogo
+                </a>
+            </div>
+
         </section>
 
         <!-- Sección Ubicación -->
@@ -720,32 +753,30 @@
             </div>
         </section>
 
-        <!-- Sección Cotizaciones con FormSubmit -->
+        <!-- Sección Cotizaciones (Formato Profesional con Formspree) -->
         <section id="Cotizaciones">
-            <h2>Realiza tu cotización</h2>
+            <h2>Realiza tu cotización y pedido</h2>
             
-            <form action="https://formsubmit.co/ventas@suministrosramon.com.mx" method="POST">
-                <!-- Desactiva el captcha de FormSubmit -->
-                <input type="hidden" name="_captcha" value="false">
-                <!-- Personaliza el asunto del correo que te llegará -->
-                <input type="hidden" name="_subject" value="Nueva Cotización - Suministros Ramón">
-
+            <!-- Recuerda cambiar TU_CODIGO_AQUI por el link de Formspree -->
+            <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo:</label>
                     <input type="text" id="nombre" name="Nombre" required placeholder="Ej. Juan Pérez">
                 </div>
 
                 <div class="form-group">
-                    <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="Correo" required placeholder="ejemplo@correo.com">
+                    <label for="correo">Correo Electrónico Empresarial:</label>
+                    <!-- Formspree necesita que name sea "email" para responder fácilmente -->
+                    <input type="email" id="correo" name="email" required placeholder="Ej.@CorreoEmpresa.com">
                 </div>
 
                 <div class="form-group">
                     <label for="mensaje">Mensaje o Cotización:</label>
-                    <textarea id="mensaje" name="Mensaje" rows="5" required placeholder="Escribe aquí los productos que necesitas cotizar..."></textarea>
+                    <!-- Aquí metimos todas tus peticiones dentro del placeholder para que el usuario sepa qué datos poner -->
+                    <textarea id="mensaje" name="Mensaje" rows="7" required placeholder="Escribe aquí los productos que necesitas cotizar. Por favor, incluye en tu mensaje:Puesto que desempeña, Nombre de la empresa, RFC empresarial y Teléfono de contacto."></textarea>
                 </div>
 
-                <button type="submit">Enviar Mensaje</button>
+                <button type="submit">Enviar Solicitud</button>
             </form> 
         </section>
         
@@ -758,7 +789,7 @@
                 <!-- Información de Contacto -->
                 <div class="info-contacto">
                     <h3>Nuestros Datos</h3>
-                    <p>📧 <strong>Correo:</strong> ventas@suministrosramon.com.mx</p>
+                    <p>📧 <strong>Correo:</strong> ventas3@suministrosramon.com.mx</p>
                     <p>📞 <strong>WhatsApp:</strong> +52 229 458 7511</p>
                     <p>📍 <strong>Ubicación:</strong> Veracruz, Ver.</p>
                 </div>
